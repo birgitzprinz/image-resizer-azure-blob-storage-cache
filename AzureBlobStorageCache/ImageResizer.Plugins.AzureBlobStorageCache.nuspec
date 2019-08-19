@@ -12,11 +12,17 @@
     </description>
     <summary>
       This plugin can be used to replace the DiskCache plugin on Azure web app to avoid filling up the limited disk space of the Azure web app. To avoid high latency, the Blob storage and the Azure web app should be placed in the same Azure region. This cache plugin is slower than the DiskCache so please be aware of the performance.
-      Enable this plugin in resizer section of web.config file.
+      Enable this plugin in resizer section of web.config file:
+      &#x3C;resizer&#x3E;
+    &#x3C;plugins&#x3E;
+    &#x3C;add name=&#x22;AzureBlobStorageCache&#x22; /&#x3E;
+    &#x3C;/plugins&#x3E;
+    &#x3C;azureblobstoragecache connectionStringName=&#x22;your_blob_connection_string_name&#x22; cacheAccessTimeout=&#x22;timeout_in_seconds&#x22; container=&#x22;your_blob_container&#x22; /&#x3E;
+    &#x3C;/resizer&#x3E;
     </summary>
-    <licenseUrl>https://github.com/birgitzprinz/image-resizer-epi-blob-storage-cache/blob/master/LICENSE</licenseUrl>
-    <projectUrl>https://github.com/birgitzprinz/image-resizer-epi-blob-storage-cache/</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/birgitzprinz/image-resizer-epi-blob-storage-cache/master/project-icon.png</iconUrl>
+    <license type="expression">GPL-3.0-or-later</license>
+    <projectUrl>https://github.com/birgitzprinz/image-resizer-azure-blob-storage-cache/</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/birgitzprinz/image-resizer-azure-blob-storage-cache/master/project-icon.png</iconUrl>
     <releaseNotes>
       - First release.
     </releaseNotes>
