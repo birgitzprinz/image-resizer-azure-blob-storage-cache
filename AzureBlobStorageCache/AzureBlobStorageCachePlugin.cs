@@ -136,7 +136,7 @@ namespace ImageResizer.Plugins.AzureBlobStorageCache
         public void LoadSettings(Config c)
         {
             Enabled = c.get("azureblobstoragecache.enabled", Enabled);
-            ConnectionStringName = c.get("azureblobstoragecache.connectionstringname", null);
+            ConnectionStringName = c.get("azureblobstoragecache.connectionStringName", null);
             CacheAccessTimeout = c.get("azureblobstoragecache.cacheAccessTimeout", CacheAccessTimeout);
             AsyncBufferSize = c.get("azureblobstoragecache.asyncBufferSize", AsyncBufferSize);
             AsyncWrites = c.get("azureblobstoragecache.asyncWrites", AsyncWrites);
