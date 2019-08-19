@@ -12,6 +12,7 @@
     </description>
     <summary>
       This plugin can be used to replace the DiskCache plugin on Azure web app to avoid filling up the limited disk space of the Azure web app. To avoid high latency, the Blob storage and the Azure web app should be placed in the same Azure region. This cache plugin is slower than the DiskCache so please be aware of the performance.
+      Enable this plugin in resizer section of web.config file.
     </summary>
     <licenseUrl>https://github.com/birgitzprinz/image-resizer-epi-blob-storage-cache/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/birgitzprinz/image-resizer-epi-blob-storage-cache/</projectUrl>
